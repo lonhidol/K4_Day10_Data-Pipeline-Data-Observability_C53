@@ -17,11 +17,10 @@
 *   **Ngày xuất bản mới nhất:** `2026-08-01`
 *   **Ngày xuất bản cũ nhất:** `2026-02-12`
 *   **Trạng thái tươi mới tổng thể:** ✅ FRESH
-*   **Thời gian kiểm định:** `2026-08-06T10:26:12.605947+00:00`
+*   **Thời gian kiểm định:** `2026-08-06T12:12:41.024322+00:00`
 
 ## 3. Chỉ Số Hiệu Năng RAG Baseline
 *   **Retrieval Hit Rate (Tỷ lệ tìm trúng):** 100.00%
 *   **Mean Token F1 (Điểm F1 trung bình):** 100.00%
 *   **LLM Judge Accuracy (Độ chính xác của giám khảo LLM):** 100.00%
 *   **Mean Judge Score (Điểm giám khảo trung bình):** 5.00 / 5.0
-
