@@ -121,3 +121,8 @@ def main() -> None:
     )
     print(f"✅ Pha 2 hoàn thành thành công!")
     print(f"    Báo cáo so sánh lưu tại: {settings.paths.comparison_report}")
+
+
+if __name__ == "__main__":
+    main()
+

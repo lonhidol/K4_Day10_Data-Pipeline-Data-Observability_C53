@@ -12,8 +12,8 @@ Báo cáo này phân tích mức độ tác động của lỗi dữ liệu (Dat
 | **Dòng quá hạn (Stale)** | 0 | 2 | 0 | -2 |
 | **Tóm tắt bị rỗng / ngắn** | 0 | 2 | 0 | -2 |
 | **Retrieval Hit Rate** | 100.00% | 40.00% | 100.00% | +60.00% |
-| **Mean Token F1** | 50.00% | 35.93% | 100.00% | +64.07% |
-| **Mean Judge Score** | 3.40 / 5.0 | 2.73 / 5.0 | 5.00 / 5.0 | +2.27 |
+| **Mean Token F1** | 100.00% | 35.93% | 100.00% | +64.07% |
+| **Mean Judge Score** | 5.00 / 5.0 | 2.73 / 5.0 | 5.00 / 5.0 | +2.27 |
 
 ## 2. Phân Tích Tác Động Của Dữ Liệu Lỗi
 *   **Xóa các bản ghi mới nhất (stale date / missing latest):** Làm cho RAG Agent không thể trả lời các câu hỏi về những bài báo mới nhất hoặc trả lời sai do dữ liệu lỗi thời.
