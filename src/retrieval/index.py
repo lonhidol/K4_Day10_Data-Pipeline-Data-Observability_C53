@@ -45,6 +45,14 @@ class LocalEmbeddingIndex:
         records = df.to_dict(orient="records")
         documents: list[dict[str, Any]] = []
         for index, row in enumerate(records):
+            pub_val = row["published"]
+            if hasattr(pub_val, "strftime"):
+                pub_str = pub_val.strftime("%Y-%m-%d")
+            elif pd.notna(pub_val):
+                pub_str = str(pub_val)
+            else:
+                pub_str = ""
+                
             documents.append(
                 {
                     "record_id": f"{row['paper_id']}::{index}",
@@ -54,12 +62,12 @@ class LocalEmbeddingIndex:
                     "metadata": {
                         "paper_id": row["paper_id"],
                         "title": row["title"],
-                        "published": row["published"],
-                        "authors_joined": row["authors_joined"],
-                        "categories_joined": row["categories_joined"],
+                        "published": pub_str,
+                        "authors_joined": row["authors_joined"] if pd.notna(row["authors_joined"]) else "",
+                        "categories_joined": row["categories_joined"] if pd.notna(row["categories_joined"]) else "",
                         "summary": row["summary"],
-                        "abs_url": row["abs_url"],
-                        "pdf_url": row["pdf_url"],
+                        "abs_url": row["abs_url"] if pd.notna(row["abs_url"]) else "",
+                        "pdf_url": row["pdf_url"] if pd.notna(row["pdf_url"]) else "",
                     },
                 }
             )
