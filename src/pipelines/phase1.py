@@ -95,3 +95,7 @@ def main() -> None:
     )
     print(f"✅ Baseline pipeline Pha 1 hoàn thành thành công!")
     print(f"    Báo cáo lưu tại: {settings.paths.baseline_report}")
+
+
+if __name__ == "__main__":
+    main()
