@@ -1,5 +1,5 @@
 {
-    "report_name": "baseline_quality",
+    "report_name": "repaired_quality",
     "total_records": 24,
     "null_paper_ids": 0,
     "duplicate_paper_ids": 0,
@@ -8,5 +8,5 @@
     "short_summaries": 0,
     "stale_records": 0,
     "passed": true,
-    "source_timestamp": "2026-08-06T09:50:27.899273+00:00"
+    "source_timestamp": "2026-08-06T10:11:15.781416+00:00"
 }

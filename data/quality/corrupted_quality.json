@@ -1,0 +1,12 @@
+{
+    "report_name": "corrupted_quality",
+    "total_records": 24,
+    "null_paper_ids": 0,
+    "duplicate_paper_ids": 3,
+    "missing_titles": 0,
+    "missing_summaries": 2,
+    "short_summaries": 2,
+    "stale_records": 2,
+    "passed": false,
+    "source_timestamp": "2026-08-06T10:10:59.398841+00:00"
+}
