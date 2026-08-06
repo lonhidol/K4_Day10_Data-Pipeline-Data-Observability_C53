@@ -141,7 +141,7 @@
     "judge": {
       "score": 1,
       "correct": false,
-      "reasoning": "The model answer provided a completely different set of authors than the reference answer. None of the authors listed in the model answer are present in the reference answer."
+      "reasoning": "The model answer provides a completely different list of authors compared to the reference answer. None of the authors listed in the model answer are present in the reference answer."
     }
   },
   {
@@ -199,7 +199,7 @@
     "judge": {
       "score": 1,
       "correct": false,
-      "reasoning": "The model answer provides an introduction about LLMs and their limitations, which is not a summary of the paper's content. The reference answer correctly extracts the abstract, which summarizes the paper's core problem and context."
+      "reasoning": "The model answer provides an introduction to LLMs and their limitations, which is not a summary of the specific paper mentioned in the question. The reference answer correctly identifies the abstract's focus on the challenges of diagnosing jawbone lesions, which is directly related to the paper's topic. The model answer is completely off-topic."
     }
   },
   {
@@ -286,7 +286,7 @@
     "judge": {
       "score": 1,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer is completely irrelevant to the question and the reference answer. It discusses RAG bottlenecks, while the question and reference are about time-series forecasting for cross-market equity analysis."
     }
   },
   {
@@ -431,7 +431,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer perfectly matches the reference answer, providing the exact publication date."
+      "reasoning": "The model answer perfectly matches the reference answer."
     }
   }
 ]

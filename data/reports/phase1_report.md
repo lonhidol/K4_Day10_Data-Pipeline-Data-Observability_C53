@@ -17,7 +17,7 @@
 *   **Ngày xuất bản mới nhất:** `2026-08-01`
 *   **Ngày xuất bản cũ nhất:** `2026-02-12`
 *   **Trạng thái tươi mới tổng thể:** ✅ FRESH
-*   **Thời gian kiểm định:** `2026-08-06T12:12:41.024322+00:00`
+*   **Thời gian kiểm định:** `2026-08-06T14:12:58.056243+00:00`
 
 ## 3. Chỉ Số Hiệu Năng RAG Baseline
 *   **Retrieval Hit Rate (Tỷ lệ tìm trúng):** 100.00%
