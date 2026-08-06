@@ -1,0 +1,12 @@
+{
+    "report_name": "dummy_quality_report",
+    "total_records": 4,
+    "null_paper_ids": 0,
+    "duplicate_paper_ids": 1,
+    "missing_titles": 1,
+    "missing_summaries": 0,
+    "short_summaries": 1,
+    "stale_records": 1,
+    "passed": false,
+    "source_timestamp": "2026-08-06T09:05:48.356473+00:00"
+}
