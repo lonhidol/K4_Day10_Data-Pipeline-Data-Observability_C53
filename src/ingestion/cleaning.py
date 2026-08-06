@@ -62,10 +62,37 @@ def build_clean_dataframe(records: list[PaperRecord], run_date: datetime) -> pd.
     )
     
     # 5. Drop duplicates va filter row xau
-    df = df.drop_duplicates(subset=["paper_id"], keep="first")
-    df = df[df["paper_id"].notna() & (df["paper_id"].str.strip() != "")]
-    df = df[df["title"].notna() & (df["title"].str.strip() != "")]
-    df = df[df["summary"].notna() & (df["summary_chars"] >= 30)]
+    initial_count = len(df)
+    
+    # Lọc trùng lặp paper_id
+    df_dedup = df.drop_duplicates(subset=["paper_id"], keep="first")
+    dedup_removed = initial_count - len(df_dedup)
+    
+    # Lọc paper_id rỗng
+    df_valid_id = df_dedup[df_dedup["paper_id"].notna() & (df_dedup["paper_id"].str.strip() != "")]
+    id_removed = len(df_dedup) - len(df_valid_id)
+    
+    # Lọc tiêu đề rỗng
+    df_valid_title = df_valid_id[df_valid_id["title"].notna() & (df_valid_id["title"].str.strip() != "")]
+    title_removed = len(df_valid_id) - len(df_valid_title)
+    
+    # Lọc tóm tắt rỗng hoặc ngắn hơn 30 ký tự
+    df_clean = df_valid_title[df_valid_title["summary"].notna() & (df_valid_title["summary_chars"] >= 30)]
+    summary_removed = len(df_valid_title) - len(df_clean)
+    
+    # Ghi nhận logs
+    print(f"[Cleaning Log] Bắt đầu làm sạch với {initial_count} bản ghi thô.")
+    if dedup_removed > 0:
+        print(f"[Cleaning Log] Đã lọc bỏ {dedup_removed} bản ghi trùng lặp paper_id.")
+    if id_removed > 0:
+        print(f"[Cleaning Log] Đã lọc bỏ {id_removed} bản ghi do thiếu paper_id.")
+    if title_removed > 0:
+        print(f"[Cleaning Log] Đã lọc bỏ {title_removed} bản ghi do tiêu đề rỗng.")
+    if summary_removed > 0:
+        print(f"[Cleaning Log] Đã lọc bỏ {summary_removed} bản ghi do tóm tắt rỗng hoặc quá ngắn (< 30 ký tự).")
+    print(f"[Cleaning Log] Hoàn thành làm sạch, còn lại {len(df_clean)} bản ghi đạt chuẩn.")
+    
+    df = df_clean
     
     # 6. Sort dataframe va return
     df = df.sort_values(by="published", ascending=False)
