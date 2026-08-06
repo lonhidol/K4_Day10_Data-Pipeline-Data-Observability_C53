@@ -1,0 +1,38 @@
+[
+  {
+    "id": "q_x_1",
+    "question_type": "summary",
+    "question": "What is the summary of the paper 'The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges'?",
+    "ground_truth": "The rapid evolution of large language models (LLMs) has catalyzed a shift from passive AI systems toward autonomous agentic architectures capable of reasoning, memory, tool use, and multi-agent collaboration.",
+    "ground_truth_doc_ids": [
+      "10-63646-kpqm1958"
+    ]
+  },
+  {
+    "id": "q_x_2",
+    "question_type": "authors",
+    "question": "Who authored the paper 'The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges'?",
+    "ground_truth": "Ben J. Weber, Clara M. Hofmann, Amara N. Okoye",
+    "ground_truth_doc_ids": [
+      "10-63646-kpqm1958"
+    ]
+  },
+  {
+    "id": "q_x_3",
+    "question_type": "date",
+    "question": "When was the publication date of the paper 'The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges'?",
+    "ground_truth": "1782777600000",
+    "ground_truth_doc_ids": [
+      "10-63646-kpqm1958"
+    ]
+  },
+  {
+    "id": "q_x_4",
+    "question_type": "categories",
+    "question": "What categories does the paper 'The Age of Autonomous Agents: A Bibliometric Review of Agentic AI Architectures, Applications, and Emerging Challenges' belong to?",
+    "ground_truth": "",
+    "ground_truth_doc_ids": [
+      "10-63646-kpqm1958"
+    ]
+  }
+]
